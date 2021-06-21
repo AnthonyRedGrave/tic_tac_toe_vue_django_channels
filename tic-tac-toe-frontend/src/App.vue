@@ -1,17 +1,16 @@
 <template>
   <div id="nav">
-    <!-- <router-link to="/game">Game</router-link> -->
-    <Main/>
+    <router-view></router-view>
   </div>
-  <router-view/>
+  
 </template>
 
 <script>
-import Main from '@/components/Main.vue'
+// import Main from '@/components/Main.vue'
 export default {
     name: 'App',
     components:{
-      Main
+      // Main
     }
 }
 </script>

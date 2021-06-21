@@ -1,6 +1,12 @@
 from django.urls import path
-from .views import GameListViewSet
+from .views import *
+from rest_framework.routers import SimpleRouter
+
+router = SimpleRouter()
+router.register(r'game/list', GameListViewSet)
 
 urlpatterns = [
-    path('game/list/', GameListViewSet, name="game_list")
+    path('index/', index, )
 ]
+
+urlpatterns += router.urls

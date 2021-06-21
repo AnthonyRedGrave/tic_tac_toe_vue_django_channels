@@ -15,11 +15,16 @@ export default {
         },
         gameEnd:{
             type: Boolean
+        },
+        user2IsReady:{
+            type: Boolean
         }
     },
     methods:{
         boxPressed(id){
-            if(this.gameEnd === false){
+            console.log(this.user2IsReady === true)
+            console.log(this.gameEnd === false && this.user2IsReady === true)
+            if(this.gameEnd === false && this.user2IsReady === true){
                 this.$emit('selectBox', id)
             }
             
